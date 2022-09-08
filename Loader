@@ -1,0 +1,18 @@
+repeat wait() until game:IsLoaded() and game.Players and game.Players.LocalPlayer
+wait(2)
+
+for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+	v:Disable()
+end
+
+
+local games = {
+6403373529
+}
+
+for i,v in pairs (games) do
+if v == game.PlaceId then
+print("Loaded")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Skrapisismyscript/Immortal_Hub/main/" .. v ))()
+end
+end
