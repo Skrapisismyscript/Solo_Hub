@@ -1,16 +1,11 @@
-task.spawn(function()
-    repeat task.wait()
-        pcall(function()
-            game.Players.LocalPlayer.Character.Humanoid:ChangeState(8)
-game:GetService("ReplicatedStorage").Events.footstep:FireServer()
 
+task.spawn(function()
+    repeat task.wait(0.5)
             local args = {
                 [1] = 10,
                 [2] = "dash"
             }
             
             game:GetService("ReplicatedStorage").Events.takestam:FireServer(unpack(args))
-        end)
-    until false
-    
+   until false
 end)
